@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>flex</h2>
+        <div>控制单一维度（上下、左右）的线性分布</div>
+        <style>
+            .container {
+                display: flex; /*宣告 flex 使之成為彈性容器*/
+                flex-direction: row;
+                /* 换行方式 */
+                flex-wrap: wrap;
+                /* 主轴上弹性项目的分布   */
+                justify-content: flex-start;
+                justify-items: flex-start;
+                /* 相交轴上弹性项目的分布   */
+                align-content: flex-start;
+                /* 相交轴上弹性项目的对齐位置 */
+                /* align-content 和align-items 的差别在哪？一个是content，一个是items，就字面上就足以表明他们操控对象的身分。 */
+                align-items: flex-start;
+                width: 200px;
+                height: 200px;
+                background-color: #a5def5;
+            }
+            .item {
+                /*彈性項目*/
+                /* 覆写align-items */
+                align-self: auto ;
+                /* 弹性增长系数计算方式 */
+                flex-grow: 1 ;
+                /* 弹性压缩系数计算方式 */
+                flex-shrink: 1;
+                width: 40px;
+                height: 40px;
+                margin: 5px;
+                background-color: #00a0e9;
+            }
+        </style>
+        <div class="container">
+            <div class="item"></div>
+            <span class="item"></span>
+
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+
+            <a href="#" class="item"></a>
+        </div>
+    </body>
+</html>
+
+display flex-flow flex-direction flex-wrap justify-content align-content
+align-items ---------------------------- align-self flex flex-grow flex-shrink
+flex-basis order
